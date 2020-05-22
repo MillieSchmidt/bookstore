@@ -138,8 +138,9 @@ li a:hover {
         align-items: center;
     }
 
-    .nav-bar ul {
+    ul {
         margin: 0, auto;
+        padding-right: 0;
     }
 }
 
@@ -152,7 +153,24 @@ li a:hover {
 
 @media screen and (max-width: 384px) {
     header {
+        margin-top: 0;
         height: 490px;
+    }
+
+    ul {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-right: 0;
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        height: 30px;
+        font-size: 20px;
+    }
+
+    #description {
+        font-size: 14px;
     }
 }
 
@@ -200,6 +218,13 @@ table img:hover {
     table img {
         width: 70px;
         height: 100px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    table img {
+        width: 49px;
+        height: 70px;
     }
 }
 
@@ -334,6 +359,12 @@ button {
     .profileimage {
         width: 100px;
         height: 100px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .aboutpage #paragraph {
+        font-size: 12px;
     }
 }
 
