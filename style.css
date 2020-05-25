@@ -219,12 +219,20 @@ table img:hover {
         width: 70px;
         height: 100px;
     }
+
+    table td {
+        font-size: 10px;
+    }
 }
 
 @media screen and (max-width: 370px) {
     table img {
         width: 49px;
         height: 70px;
+    }
+
+    table td {
+        font-display: none;
     }
 }
 
