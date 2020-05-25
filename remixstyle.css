@@ -227,7 +227,7 @@ form {
 
 @media screen and (max-width: 401px) {
     .content {
-        height: 920px;
+        height: 1520px;
     }
 
     img {
@@ -253,7 +253,7 @@ form {
     h1 {
         margin-right: 50px;
     }
-    
+
     .content {
         height: 1120px;
     }
