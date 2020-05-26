@@ -159,7 +159,7 @@ li a:hover {
 @media screen and (max-width: 384px) {
     header {
         margin-top: 0;
-        height: 100px;
+        height: 40px;
     }
 
     ul {
@@ -177,6 +177,7 @@ li a:hover {
     #description {
         font-size: 14px;
         text-align: center;
+        margin-bottom: 0;
     }
 }
 
