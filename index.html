@@ -4,6 +4,7 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css">
+        <link rel="stylesheet" href="aos.css">
         <title>מילי שמידט</title>
     </head>
 <body>
@@ -30,7 +31,7 @@
             תודה!<br>                
         </p>
     <section class="table">
-        <table class="animate__animated animate__backInDown" id="books">
+        <table data-aos="zoom-out" data-aos-duration="2000" id="books">
             <tr>
                 <td><img src="Untitled.jpg" alt="חדש"><br>בקרוב!</td>
                 <td><a onclick="window.open('temporarilynew.html', '_self;')">
@@ -54,7 +55,7 @@
     </section>
     </div>
 
-    <section class="animate__animated animate__backInDown">
+    <section data-aos="zoom-in" data-aos-duration="1000">
         <div clas="content">
         <div class="aboutpage">
             <div class="topofpage">
@@ -76,12 +77,12 @@
         </div>
     </section>
     
-    <section class="animate__animated animate__backInDown">
+    <section>
         <div id="myGallery" class="gallery">
-            <img class="image" src="Reviews/Guy.png" alt="המלצה">
-            <img class="image" src="Reviews/Geula.png" alt="המלצה">
-            <img class="image" src="Reviews/Zmani.png" alt="המלצה">
-            <img class="specialimage" src="Reviews/SweetNightBig.png" alt="המלצה">
+            <img data-aos="flip-left" data-aos-duration="100000" class="image" src="Reviews/Guy.png" alt="המלצה">
+            <img data-aos="flip-left" data-aos-duration="100000" class="image" src="Reviews/Geula.png" alt="המלצה">
+            <img data-aos="flip-left" data-aos-duration="100000" class="image" src="Reviews/Zmani.png" alt="המלצה">
+            <img data-aos="flip-left" data-aos-duration="100000" class="specialimage" src="Reviews/SweetNightBig.png" alt="המלצה">
         </div>
     </section> 
 
@@ -100,5 +101,12 @@
         </ul>
     </footer>
     <script src="script.js"></script>
+    <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="aos.js"></script>
+    <script type="text/javascript">
+        AOS.init({
+            
+        });
+    </script>
 </body>
 </html>
