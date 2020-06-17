@@ -6,11 +6,11 @@ body {
     width: 100%;
     min-height: 100vh;
     margin: 0;
-    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5), rgb(173, 216, 230));
-    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgb(173, 216, 230));
-    background-image: -ms-linear-gradient(top,  rgba(255, 255, 255, 0.5), rgb(173, 216, 230));
-    background-image: -o-linear-gradient(top,  rgba(255, 255, 255, 0.5), rgb(173, 216, 230));
-    background-image: linear-gradient(top, rgba(255, 255, 255, 0.5), rgb(173, 216, 230));
+    background-image: -webkit-linear-gradient(top, rgb(146, 255, 255, 0.55), rgb(116, 206, 236));
+    background-image: -moz-linear-gradient(top, rgba(146, 255, 255, 0.55), rgb(116, 206, 236));
+    background-image: -ms-linear-gradient(top,  rgba(146, 255, 255, 0.55), rgb(116, 206, 236));
+    background-image: -o-linear-gradient(top,  rgba(146, 255, 255, 0.55), rgb(116, 206, 236));
+    background-image: linear-gradient(top, rgba(146, 255, 255, 0.55), rgb(116, 206, 236));
     font-size: 18px;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
@@ -47,6 +47,15 @@ img {
 p {
     margin-top: 15px;
     padding: 0 30px;
+}
+
+.links a {
+    color: black;
+}
+
+.links a:hover {
+    color: blue;
+    cursor: pointer;
 }
 
 form {
