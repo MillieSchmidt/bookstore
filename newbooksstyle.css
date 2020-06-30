@@ -51,6 +51,7 @@ p {
 
 .links a {
     color: black;
+    text-decoration: underline;
 }
 
 .links a:hover {
