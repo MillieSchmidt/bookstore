@@ -8,6 +8,151 @@
         <title>מילי שמידט</title>
     </head>
 <body>
+      <div class="modal" id="modal">
+        <div class="modal-header">
+            <button data-close class="close" id="closebutton">&times;</button>
+            <div class="title">מזל טוב!</div>
+        </div>
+        <div class="modal-content">
+            מבצע מיוחד לגולשים באתר, לשבועות הקרובים בלבד!<br>
+            לכבוד הספר השמיני שלי, שייצא בקרוב, אתם זוכים להנחה משמעותית.<br><span class="bigger">
+            "מעקבים" החדש מגיע אליכם במקום ב-79 שקלים למודפס, במחיר מבצע של 39 שקלים.<br>
+            ובמקום במחיר 39 שקלים לעותק דיגיטלי, במחיר מבצע של 29 שקלים.<br><br></span>
+            אבל בגלל שאני מעריך את הקוראים שלי, אני רוצה לתת לכם עוד משהו.<br>
+            לכן, לכל הזמנה של "מעקבים" בין אם הוא דיגיטלי או מודפס, תוכלו לצרף עד שלושה ספרים נוספים במחיר מבצע של 20 שקלים לאחד.<br>
+            <span class="bigger">
+            הזמנתם את "מעקבים" וספר נוסף? תוסיפו רק עוד 20 שקלים.<br>
+            עוד ספר? 20 שקלים נוספים.<br>
+            ספר שלישי לחבילה? רק 20 שקלים נוספים!<br>
+            או לסיכום, חבילה של ארבעה ספרים נפלאים במחיר של 89-99 שקלים בלבד.</span><br><br>
+            <input type="button" value="הזמינו עכשיו" id="buy" onclick="window.open('sale.html', '_self;')">
+        </div>
+      </div>
+      <div id="overlay"></div>
+
+      <style>
+          .modal {
+              direction: rtl;
+              text-align: center;
+              font-family: Arial, Helvetica, sans-serif;
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%) scale(0);
+              transition: 200ms ease-in-out;
+              border: none;
+              border-radius: 60px;
+              z-index: 10;
+              background-color: rgb(12, 67, 150);
+              width: 500px;
+              max-width: 80%;
+              line-height: 25px;
+              color: white;
+          }
+
+          .modal.active {
+            transform: translate(-50%, -50%) scale(1);
+          }
+
+          .modal-header {
+              padding: 20px 25px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+          }
+
+          .modal-header .title {
+              font-size: 26px;
+              font-weight: bold;
+              margin-left: 180px;
+              letter-spacing: 2px;
+          }
+
+          @media screen and (max-width: 472px) {
+            .modal-header .title {
+              font-size: 20px;
+              margin-left: 100px;
+            }
+          }
+
+          @media screen and (max-width: 377px) {
+              .modal-header .title {
+                  font-size: 16px;
+                  margin-left: 70px;
+              }
+          }
+
+          .modal-header .close {
+              cursor: pointer;
+              border: none;
+              outline: none;
+              background: none;
+              font-size: 1.25rem;
+              font-weight: bold;
+              color: white;
+          }
+
+          .modal-content {
+              padding: 20px 25px;
+              letter-spacing: 1px;
+              font-size: 16px;
+          }
+
+          .modal-content #buy {
+              cursor: pointer;
+              border: none;
+              border-radius: 50px;
+              outline: none;
+              background-color: white;
+              line-height: 40px;
+              font-weight: bold;
+          }
+
+          .modal-content .bigger {
+              font-size: 18px;
+          }
+
+          @media screen and (max-width: 516px) {
+              .modal-content {
+                  margin-top: -25px;
+                  font-size: 12px;
+              }
+
+              .modal-content .bigger {
+                  font-size: 12px;
+              }
+          }
+
+          @media screen and (max-width: 376px) {
+              .modal-content {
+                  margin-top: -40px;
+              }
+          }
+
+          @media screen and (max-width: 377px) {
+            .modal-content #buy {
+                  line-height: 20px;
+              }
+          }
+
+          #overlay {
+              position: fixed;
+              opacity: 0;
+              transition: 200ms ease-in-out;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: rgb(0, 0, 0, .5);
+              pointer-events: none;
+          }
+
+          #overlay.active {
+              opacity: 1;
+              pointer-events: all;
+          }
+      </style>
+
     <div id="progress"></div>
     <header class="animate__animated animate__backInDown" id="up">
         <div class="content">
@@ -109,5 +254,49 @@
             
         });
     </script>
+          <script>
+            // const openModalButtons=document.querySelectorAll('[data-modal-target]')
+            const closeModalButtons=document.querySelectorAll('[data-close]')
+            const overlay=document.getElementById('overlay')
+  
+            // openModalButtons.forEach(button=> {
+            //     button.addEventListener('click', ()=> {
+            //     const modal=document.querySelector(button.dataset.modalTarget)
+            //     openModal(modal)
+            //     })
+            // })
+  
+            overlay.addEventListener('click', ()=> {
+              const modals=document.querySelectorAll('.modal.active')
+              modals.forEach(modals=> {
+                  closeModal(modal)
+              })
+            })
+  
+            closeModalButtons.forEach(button=> {
+                button.addEventListener('click', ()=> {
+                const modal=button.closest('.modal')
+                closeModal(modal)
+                })
+            })
+  
+            function openModal(modal) {
+                if (modal==null) return
+                modal.classList.add('active')
+                overlay.classList.add('active')
+            }
+  
+            function closeModal(modal) {
+                if (modal==null) return
+                modal.classList.remove('active')
+                overlay.classList.remove('active')
+            }
+
+            window.onload=function() {
+                setTimeout(function () {
+                openModal(modal) ('show');
+                }, 1000);
+            }
+        </script>
 </body>
 </html>
