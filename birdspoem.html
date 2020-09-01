@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1,">
         <title>קטע מהספר</title>
         <link rel="stylesheet" href="poem.css">
     </head>
     <body>
+        <div id="progress"></div>
+        <div class="sidebar" id="fixed">
+            <div class="nav-bar">                
+                <ul id="my-list">
+                    <li><a href="#whoami">מי אני?</a></li>
+                    <li><a href="#">חנות</a></li>
+                    <li><a href="podcast.html">פודקאסט</a></li>
+                    <li><a href="reviews.html">ביקורות</a></li>
+                    <li><a href="#whoami">צור קשר</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="wrapper">
             <div class="chapter">
                 <img src="people.jpg" alt="אנשים ברחוב">
@@ -72,21 +85,8 @@
         </div>  
 
         <footer>
-            <ul>
-                <li>
-                    <a onclick="window.open('paperbirdsnew.html', '_self;')">לעמוד הספר</a>
-                </li>
-                <li>
-                    <a onclick="window.open('index.html', '_self;')">לחנות</a>
-                </li>
-                <li>
-                    <a href="mailto:millenium2124@gmail.com>millenium2124@gmail.com">כתבו לי במייל</a>
-                </li>
-                <li>
-                    <a href="https://t.me/realmillieschmidt?fbclid=IwAR2SSDdlP6VatJdO2_xEspCnrUkctlYnRRCHrFfZAT1gtGCof4lvrCXD86o">ערוץ הטלגרם</a>
-                </li>
-                <p>כל הזכויות שמורות למילי שמידט © 2020</p>
-            </ul>
+            <p>כל הזכויות שמורות למילי שמידט © 2020</p>
         </footer>
+        <script src="script.js"></script>
     </body>
 </html>
