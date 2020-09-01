@@ -111,11 +111,12 @@ header h1 {
 }
 
 .episode {
-    margin-right: 530px;
-    margin-bottom: 50px;
+    margin: 50px auto;
+    /* margin-right: 530px;
+    margin-bottom: 50px; */
 }
 
-@media screen and (max-width: 1125px) {
+/* @media screen and (max-width: 1125px) {
     .episode {
         margin-right: 412px;
         margin-bottom: 10px;
@@ -138,7 +139,7 @@ header h1 {
     .episode {
         margin-right: 100px;
     }
-}
+} */
 
 footer {
     height: 50px;
