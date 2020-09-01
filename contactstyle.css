@@ -1,11 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
+    box-sizing: border-box;
     direction: rtl;
 }
 
 body {
-    width: 100vw;
+    width: 100%;
+    /* min-height: 100vh; */
     margin: 0;
-    min-height: 100vh;
     background-color: rgb(255, 255, 235);
     font-size: 18px;
     color: black;
@@ -15,18 +20,9 @@ body {
     text-align: center;
 }
 
-h1 {
-    margin-top: 60px;
-    margin-bottom: 44px;
-}
-
-@media screen and (max-width: 470px) {
-    .thanks h1 {
-        font-size: 20px;
-    }
-}
-
 .sidebar {
+    width: 100%;
+    position: fixed;
     top: 0;
     z-index: 99999;   
 }
@@ -71,27 +67,34 @@ li a:hover {
     }
 }
 
-div {
-	background-color:white;
+/* header {
+    margin-top: 70px;
+} */
+
+h1 {
+    margin-top: 100px;
+    margin-bottom: 40px;
 }
 
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
-    height: 290px;
+.text {
+    display: inline-block;
+    width: 50%;
 }
 
-@media screen and (max-width: 470px) {
-    img {
-        width: 200px;
-        height: 194px;
-    }
+#contactinfo a,
+#contactinfo a:active,
+#contactinfo a:visited {
+    text-decoration: none;
+    color: blue;
+}
+
+#contactinfo a:hover {
+    cursor: pointer;
+    color: purple;
 }
 
 footer {
-    height: 20px;
+    height: 56px;
     margin-top: 20px;
     padding: 20px;
     text-align: center;

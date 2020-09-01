@@ -6,11 +6,7 @@ body {
     width: 100%;
     min-height: 100vh;
     margin: 0;
-    background-image: -webkit-linear-gradient(top, rgb(146, 255, 255, 0.55), rgb(116, 206, 236));
-    background-image: -moz-linear-gradient(top, rgba(146, 255, 255, 0.55), rgb(116, 206, 236));
-    background-image: -ms-linear-gradient(top,  rgba(146, 255, 255, 0.55), rgb(116, 206, 236));
-    background-image: -o-linear-gradient(top,  rgba(146, 255, 255, 0.55), rgb(116, 206, 236));
-    background-image: linear-gradient(top, rgba(146, 255, 255, 0.55), rgb(116, 206, 236));
+    background-color: rgb(255, 255, 235);
     font-size: 18px;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
@@ -18,11 +14,59 @@ body {
     overflow-x: hidden;
 }
 
+.sidebar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99999;   
+}
+
+.nav-bar {
+    background-color: rgb(39, 39, 39);
+}
+
+.nav-bar #my-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav-bar li {
+    display: inline-block;
+    margin: 20px 20px;
+    list-style: none;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: rgb(255, 155, 135);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 531px) {
+    li a {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 444px) {
+    li a {
+        font-size: 10px;
+    }
+}
+
 .bookpage {
   margin-top: 0;
 }
 
 .bookname {
+    margin-top: 100px;
     width: 100%;
     height: 100px;
     text-align: center;
@@ -334,39 +378,17 @@ form {
 }
 
 footer {
-    position: relative;
-    bottom: 0px;
-    width: 100%;
+    height: 50px;
     margin-top: 20px;
     padding: 20px;
     text-align: center;
-    background-color: #333;
+    background-color: rgb(39, 39, 39);
     color: white;
-}
-
-footer ul {
-    margin-bottom: 1px;
-    margin-top: 1px;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-}
-
-footer li a,
-footer li a:active
-footer li a:visited {
-    color: white;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-footer li a:hover {
-    color: purple;
-    cursor: pointer;
+    bottom: 0;
 }
 
 footer p {
-    font-size: 12px;
-    margin-bottom: 1px;
-    text-align: center;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 0;
 }

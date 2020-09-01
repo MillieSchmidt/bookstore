@@ -7,202 +7,50 @@
         <link rel="stylesheet" href="aos.css">
         <title>מילי שמידט</title>
     </head>
-<body>
-      <div class="modal" id="modal">
-        <!-- <div class="modal-header">
-            <button data-close class="close" id="closebutton">&times;</button>
-            <div class="title">מזל טוב!</div>
-        </div> -->
-        <div class="modal-content">
-            <p>מבצע מיוחד לגולשים באתר, לשבועות הקרובים בלבד!<br>
-            לכבוד הספר השמיני שלי, שייצא בקרוב, אתם זוכים להנחה משמעותית.<br><span class="bigger">
-            "מעקבים" החדש מגיע אליכם במקום ב-79 שקלים למודפס, במחיר מבצע של 39 שקלים.<br>
-            ובמקום במחיר 39 שקלים לעותק דיגיטלי, במחיר מבצע של 29 שקלים.<br></span></p>
-            <p id="second">אבל בגלל שאני מעריך את הקוראים שלי, אני רוצה לתת לכם עוד משהו.<br>
-            לכן, לכל הזמנה של "מעקבים" בין אם הוא דיגיטלי או מודפס, תוכלו לצרף עד שלושה ספרים נוספים במחיר מבצע של 20 שקלים לאחד.<br>
-            <span class="bigger">
-            הזמנתם את "מעקבים" וספר נוסף? תוסיפו רק עוד 20 שקלים.<br>
-            עוד ספר? 20 שקלים נוספים.<br>
-            ספר שלישי לחבילה? רק 20 שקלים נוספים!<br>
-            או לסיכום, חבילה של ארבעה ספרים נפלאים במחיר של 89-99 שקלים בלבד.</span></p>
-            <input type="button" value="הזמינו עכשיו" id="buy" onclick="window.open('sale.html', '_self;')">
-        </div>
-      </div>
-      <div id="overlay"></div>
-
-      <style>
-          .modal {
-              direction: rtl;
-              text-align: center;
-              font-family: Arial, Helvetica, sans-serif;
-              position: fixed;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%) scale(0);
-              transition: 200ms ease-in-out;
-              border: none;
-              border-radius: 60px;
-              z-index: 10;
-              background-color: rgb(12, 67, 150);
-              width: 500px;
-              max-width: 80%;
-              line-height: 25px;
-              color: white;
-          }
-
-          .modal.active {
-            transform: translate(-50%, -50%) scale(1);
-          }
-
-          .modal-header {
-              padding: 20px 25px;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-          }
-
-          .modal-header .title {
-              font-size: 26px;
-              font-weight: bold;
-              margin-left: 180px;
-              letter-spacing: 2px;
-          }
-
-          @media screen and (max-width: 472px) {
-            .modal-header .title {
-              font-size: 20px;
-              margin-left: 100px;
-            }
-          }
-
-          @media screen and (max-width: 377px) {
-              .modal-header .title {
-                  font-size: 16px;
-                  margin-left: 70px;
-              }
-          }
-
-          .modal-header .close {
-              cursor: pointer;
-              border: none;
-              outline: none;
-              background: none;
-              font-size: 1.25rem;
-              font-weight: bold;
-              color: white;
-          }
-
-          .modal-content {
-              padding: 20px 25px;
-              letter-spacing: 1px;
-              font-size: 16px;
-          }
-
-          .modal-content #buy {
-              cursor: pointer;
-              border: none;
-              border-radius: 50px;
-              outline: none;
-              background-color: white;
-              line-height: 40px;
-              font-weight: bold;
-          }
-
-          .modal-content .bigger {
-              font-size: 18px;
-          }
-
-          @media screen and (max-width: 516px) {
-              .modal-content {
-                  margin-top: -25px;
-                  font-size: 12px;
-              }
-
-              .modal-content #second {
-                  display: none;
-              }
-
-              .modal-content .bigger {
-                  font-size: 12px;
-              }
-          }
-
-          @media screen and (max-width: 376px) {
-              .modal-content {
-                  margin-top: -40px;
-              }
-          }
-
-          @media screen and (max-width: 377px) {
-            .modal-content #buy {
-                  line-height: 20px;
-              }
-          }
-
-          #overlay {
-              position: fixed;
-              opacity: 0;
-              transition: 200ms ease-in-out;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              background-color: rgb(0, 0, 0, .5);
-              pointer-events: none;
-          }
-
-          #overlay.active {
-              opacity: 1;
-              pointer-events: all;
-          }
-      </style>
-
+<body>      
     <div id="progress"></div>
     <header class="animate__animated animate__backInDown" id="up">
-        <div class="content">
-            <div class="nav-bar">
-                <div class="hero">
-                    <h1>חנות הספרים של מילי שמידט</h1>
-                </div>
-                <ul>
+        <div class="sidebar" id="fixed">
+            <div class="nav-bar">                
+                <ul id="my-list">
                     <li><a href="#whoami">מי אני?</a></li>
-                    <li><a href="#myGallery">ביקורות</a></li>
+                    <li><a href="#">חנות</a></li>
+                    <li><a href="podcast.html">פודקאסט</a></li>
+                    <li><a href="reviews.html">ביקורות</a></li>
+                    <li><a href="#whoami">צור קשר</a></li>
                 </ul>
-            </div>    
+            </div>
+        </div>
+        <div class="hero">
+            <h1>מילי שמידט</h1>
         </div>
     </header>
 
     <div class="content">
-        <p class="animate__animated animate__backInDown" id="description">אם הגעת לכאן, כנראה שיש לך מזל.<br>
-            בשנים האחרונות כבר התרגלתי לזה שאני "סופר בוטיק", מחתרתי שכזה, עם כמה מאות קוראים נאמנים שמחכים לספרים שלי, וזה הכול. זה מאפשר לי הרבה חופש במה שאני כותב, ואני מנצל אותו להגיד את מה שכולם רוצים ואף אחד לא מעז, או את מה שכולם צריכים ואף אחד לא רוצה לשמוע.<br>
-            ספרים הם מגרש המשחקים לניסויי המחשבה שלי, וזו הסיבה שהם מגוונים כל כך. יש בהם גם כתיבה ספקולטיבית, גם כתיבה אישית, גם ריאליזם, אימה, סיפורים קצרים, רומנים ושירים.<br>
-            הספרים שלי הולכים ומתרבים, לשמחת הקוראים, ולכן הגיע הזמן לרכז את הכול במקום אחד. בשביל זה בניתי את החנות הזו, עם דף לכל ספר וקנייה מאובטחת דרך פייפאל. הכול בלחיצה פשוטה על תמונת הכריכה.<br>
-            תודה!<br>                
-        </p>
-    <section class="table">
-        <table data-aos="zoom-out" data-aos-duration="2000" id="books">
-            <tr>
-                <td><a onclick="window.open('surveillance.html', '_self;')">
-                    <img src="Surveillance.jpg" alt="מעקבים"></a><br>מעקבים - בקרוב!</td>
-                <td><a onclick="window.open('temporarilynew.html', '_self;')">
-                    <img src="Temporarily.jpg" alt="זמני ביותר"></a><br>זמני ביותר</td>
-                <td><a onclick="window.open('paperbirdsnew.html', '_self;')">
-                    <img src="PaperBirds.jpg" alt="ציפורים מנייר"></a><br>ציפורים מנייר</td>
-                <td><a onclick="window.open('remix.html', '_self;')">
-                    <img src="Remix.jpg" alt="רמיקס"></a><br>ימים משונים: רמיקס</td>
-            </tr>   
-            <tr>
-                <td><a onclick="window.open('words.html', '_self;')">
-                    <img src="Words.jpg" alt="Words"></a><br>Words</td>
-                <td><a onclick="window.open('sweetnightnew.html', '_self;')">
-                    <img src="SweetNight.jpg" alt="מתוק הוא הלילה"></a><br>מתוק הוא הלילה</td>
-                <td><a onclick="window.open('strangedays.html', '_self;')">
-                    <img src="StrangeDays.jpg" alt="ימים משונים"></a><br>ימים משונים</td>
-                <td><a onclick="window.open('lishonnew.html', '_self;')">
-                    <img src="LishonKufsa.jpg" alt="לישון בתוך קופסה"></a><br>לישון בתוך קופסה</td>
-            </tr>
-        </table>
-    </section>
+        <section class="table">
+            <table data-aos="zoom-out" data-aos-duration="2000" id="books">
+                <tr>
+                    <td><a onclick="window.open('surveillance.html', '_self;')">
+                        <img src="Surveillance.jpg" alt="מעקבים"></a><br>מעקבים</td>
+                    <td><a onclick="window.open('temporarilynew.html', '_self;')">
+                        <img src="Temporarily.jpg" alt="זמני ביותר"></a><br>זמני ביותר</td>
+                    <td><a onclick="window.open('paperbirdsnew.html', '_self;')">
+                        <img src="PaperBirds.jpg" alt="ציפורים מנייר"></a><br>ציפורים מנייר</td>
+                    <td><a onclick="window.open('remix.html', '_self;')">
+                        <img src="Remix.jpg" alt="רמיקס"></a><br>ימים משונים: רמיקס</td>
+                </tr>   
+                <tr>
+                    <td><a onclick="window.open('words.html', '_self;')">
+                        <img src="Words.jpg" alt="Words"></a><br>Words</td>
+                    <td><a onclick="window.open('sweetnightnew.html', '_self;')">
+                        <img src="SweetNight.jpg" alt="מתוק הוא הלילה"></a><br>מתוק הוא הלילה</td>
+                    <td><a onclick="window.open('strangedays.html', '_self;')">
+                        <img src="StrangeDays.jpg" alt="ימים משונים"></a><br>ימים משונים</td>
+                    <td><a onclick="window.open('lishonnew.html', '_self;')">
+                        <img src="LishonKufsa.jpg" alt="לישון בתוך קופסה"></a><br>לישון בתוך קופסה</td>
+                </tr>
+            </table>
+        </section>
     </div>
 
     <section data-aos="zoom-in" data-aos-duration="1000">
@@ -226,18 +74,10 @@
         </div>
         </div>
     </section>
-    
-    <section>
-        <div id="myGallery" class="gallery">
-            <img data-aos="flip-left" data-aos-duration="100000" class="image" src="Reviews/Guy.png" alt="המלצה">
-            <img data-aos="flip-left" data-aos-duration="100000" class="image" src="Reviews/Geula.png" alt="המלצה">
-            <img data-aos="flip-left" data-aos-duration="100000" class="image" src="Reviews/Zmani.png" alt="המלצה">
-            <img data-aos="flip-left" data-aos-duration="100000" class="specialimage" src="Reviews/SweetNightBig.png" alt="המלצה">
-        </div>
-    </section> 
 
     <footer>
-        <ul>
+        <p>כל הזכויות שמורות למילי שמידט © 2020</p>
+        <!-- <ul>
             <li>
                 <a href="">לראש האתר</a>
             </li>
@@ -246,9 +86,8 @@
             </li>
             <li>
                 <a href="https://t.me/realmillieschmidt?fbclid=IwAR2SSDdlP6VatJdO2_xEspCnrUkctlYnRRCHrFfZAT1gtGCof4lvrCXD86o">ערוץ הטלגרם</a>
-            </li>
-            <p>כל הזכויות שמורות למילי שמידט © 2020</p>
-        </ul>
+            </li>            
+        </ul> -->
     </footer>
     <script src="script.js"></script>
     <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
@@ -299,7 +138,7 @@
             window.onload=function() {
                 setTimeout(function () {
                 openModal(modal) ('show');
-                }, 1000);
+                }, 200);
             }
         </script>
 </body>
