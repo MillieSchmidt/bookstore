@@ -311,7 +311,8 @@ p a:hover {
 
 #goup {
     background-color: rgb(173, 216, 230);
-    margin-right: 700px;
+    margin: auto;
+    /* margin-right: 700px; */
     width: 100px;
     height: 40px;
     border: 1px solid;
