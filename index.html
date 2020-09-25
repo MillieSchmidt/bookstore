@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css">
         <link rel="stylesheet" href="aos.css">
@@ -9,7 +10,7 @@
     </head>
 <body>      
     <div id="progress"></div>
-    <header class="animate__animated animate__backInDown" id="up">
+    <header id="up">
         <div class="sidebar" id="fixed">
             <div class="nav-bar">                
                 <ul id="my-list">
@@ -26,32 +27,30 @@
         </div>
     </header>
 
-    <div class="content">
-        <section class="table">
-            <table data-aos="zoom-out" data-aos-duration="2000" id="books">
-                <tr>
-                    <td><a onclick="window.open('surveillance.html', '_self;')">
-                        <img src="Surveillance.jpg" alt="מעקבים"></a><br>מעקבים</td>
-                    <td><a onclick="window.open('temporarilynew.html', '_self;')">
-                        <img src="Temporarily.jpg" alt="זמני ביותר"></a><br>זמני ביותר</td>
-                    <td><a onclick="window.open('paperbirdsnew.html', '_self;')">
-                        <img src="PaperBirds.jpg" alt="ציפורים מנייר"></a><br>ציפורים מנייר</td>
-                    <td><a onclick="window.open('remix.html', '_self;')">
-                        <img src="Remix.jpg" alt="רמיקס"></a><br>ימים משונים: רמיקס</td>
-                </tr>   
-                <tr>
-                    <td><a onclick="window.open('words.html', '_self;')">
-                        <img src="Words.jpg" alt="Words"></a><br>Words</td>
-                    <td><a onclick="window.open('sweetnightnew.html', '_self;')">
-                        <img src="SweetNight.jpg" alt="מתוק הוא הלילה"></a><br>מתוק הוא הלילה</td>
-                    <td><a onclick="window.open('strangedays.html', '_self;')">
-                        <img src="StrangeDays.jpg" alt="ימים משונים"></a><br>ימים משונים</td>
-                    <td><a onclick="window.open('lishonnew.html', '_self;')">
-                        <img src="LishonKufsa.jpg" alt="לישון בתוך קופסה"></a><br>לישון בתוך קופסה</td>
-                </tr>
-            </table>
-        </section>
-    </div>
+    <div class="content">        
+        <div class="all-books">
+            <!-- <ul class="my-books" data-aos="zoom-out" data-aos-duration="2000" id="books"> -->
+                
+                    <div class="books"><a onclick="window.open('surveillance.html', '_self;')">
+                        <img src="Surveillance.jpg" alt="מעקבים"></a><br>מעקבים</div>
+                    <div class="books"><a onclick="window.open('temporarilynew.html', '_self;')">
+                        <img src="Temporarily.jpg" alt="זמני ביותר"></a><br>זמני ביותר</div>
+                    <div class="books"><a onclick="window.open('paperbirdsnew.html', '_self;')">
+                        <img src="PaperBirds.jpg" alt="ציפורים מנייר"></a><br>ציפורים מנייר</div>
+                    <div class="books"><a onclick="window.open('remix.html', '_self;')">
+                        <img src="Remix.jpg" alt="רמיקס"></a><br>ימים משונים: רמיקס</div>
+            
+                    <div class="books"><a onclick="window.open('words.html', '_self;')">
+                        <img src="Words.jpg" alt="Words"></a><br>Words</div>
+                    <div class="books"><a onclick="window.open('sweetnightnew.html', '_self;')">
+                        <img src="SweetNight.jpg" alt="מתוק הוא הלילה"></a><br>מתוק הוא הלילה</div>
+                    <div class="books"><a onclick="window.open('strangedays.html', '_self;')">
+                        <img src="StrangeDays.jpg" alt="ימים משונים"></a><br>ימים משונים</div>
+                    <div class="books"><a onclick="window.open('lishonnew.html', '_self;')">
+                        <img src="LishonKufsa.jpg" alt="לישון בתוך קופסה"></a><br>לישון בתוך קופסה</div>
+                
+            <!-- </ul> -->
+        </div>
     
 
     <section data-aos="zoom-in" data-aos-duration="1000">
@@ -64,8 +63,7 @@
                 <img class="profileimage" src="Odot.jpg" alt="אני">
             </div>
             <p id="paragraph">
-            היי, אני מילי.<br>
-            הספר הראשון שלי פורסם בשנת 2011, ופתח לי את הדלת לעולם הספרות העברי. מאז אני שם ולא מצליח לצאת.<br>
+            
             הספרים שלי יצאו גם בהוצאות לאור וגם באופן עצמאי, גם בעברית וגם באנגלית, נמכרו בחנויות ומחוץ לחנויות, דיגיטליים ומודפסים. בקיצור, המסע הזה לימד אותי המון, ואני שמח לחלוק את התובנות האלה דרך הספרים שלי. אם אתה כבר כאן, בדוק אותם!<br><br>
             ליצירת קשר:<br>
             כתבו לי אל: <a href=mailto:millenium2124@gmail.com>millenium2124@gmail.com</a href><br>
@@ -76,9 +74,15 @@
         </div>
     </section>
 
-    <footer>
+    <div class="footer-div">
+    <footer id="footer">
         <p>כל הזכויות שמורות למילי שמידט © 2020</p>
     </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="aos.js"></script>
