@@ -7,7 +7,7 @@ body {
     min-height: 100vh;
     margin: 0;
     background-color: rgb(255, 255, 235);
-    font-size: 14px;
+    font-size: 18px;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
@@ -24,52 +24,35 @@ body {
     z-index: 99999;
 }
 
-.sidebar {
+.navbar {
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 9999;   
-    font-size: 18px;   
+    z-index: 9999;
 }
 
-.nav-bar {
-    background-color: rgb(39, 39, 39);
+.navbar-nav {
+    float: right;
+    margin-right: -50px;
+    text-align: center;
 }
 
-.nav-bar #my-list {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding-left: 10px;
-    padding-right: 10px;
+.nav-item {
+    margin-left: 1em;
 }
 
-.nav-bar li {
-    display: inline-block;
-    margin: 20px 20px;
-    list-style: none;
-}
-
-li a {
-    color: white;
+#special {
+    margin-left: 20px;
+    color: rgb(255, 255, 235);
     text-decoration: none;
 }
 
-li a:hover {
+.color {
+    color: rgb(255, 255, 235);
+}
+
+.color:hover {
     color: rgb(255, 155, 135);
-    cursor: pointer;
-}
-
-@media screen and (max-width: 531px) {
-    li a {
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 444px) {
-    li a {
-        font-size: 10px;
-    }
 }
 
 .wrapper {
@@ -126,26 +109,13 @@ span {
 
 p {
     padding: 40px;
-}
-
-@media screen and (max-width: 406px) {
-    span, p {
-        font-size: 12px;
-    }
-}
-
-footer {
-    height: 90px;
-    margin-top: 0;
-    padding: 20px;
-    text-align: center;
-    background-color: rgb(39, 39, 39);
-    color: white;
-    bottom: 0;
+    font-size: 14px;
 }
 
 footer p {
+    text-align: center;
     font-size: 14px;
+    font-weight: bold;
     margin-bottom: 0;
     margin-top: 0;
 }

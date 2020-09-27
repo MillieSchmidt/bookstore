@@ -9,27 +9,45 @@
         <title>מילי שמידט</title>
     </head>
 <body>      
+    
     <div id="progress"></div>
     <header id="up">
-        <div class="sidebar" id="fixed">
-            <div class="nav-bar">                
-                <ul id="my-list">
-                    <li><a href="#whoami">מי אני?</a></li>
-                    <li><a href="#">חנות</a></li>
-                    <li><a href="podcast.html">פודקאסט</a></li>
-                    <li><a href="reviews.html">ביקורות</a></li>
-                    <li><a href="#whoami">צור קשר</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="hero">
+
+            <nav class="navbar navbar-expand-xs navbar-expand-sm navbar-light" style="background-color: rgb(39, 39, 39);">
+                <a class="nav-item" id="special">ניווט</a>
+                <button class="navbar-toggler" type="button" style="background-color: rgb(255, 255, 235)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon" style="background-color: rgb(255, 255, 235)"></span>
+                </button>
+                      
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#whoami"><span class="color">מי אני?</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><span class="color">חנות</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="podcast.html"><span class="color">פודקאסט</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="reviews.html"><span class="color">ביקורות</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#whoami"><span class="color">צור קשר</span></a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>            
+        
+        <div class="hero" data-aos="zoom-out" data-aos-duration="2000">
             <h1>מילי שמידט</h1>
         </div>
     </header>
 
     <div class="content">        
-        <div class="all-books">
-            <!-- <ul class="my-books" data-aos="zoom-out" data-aos-duration="2000" id="books"> -->
+        <div class="all-books" data-aos="zoom-out" data-aos-duration="2000">
+            
                 
                     <div class="books"><a onclick="window.open('surveillance.html', '_self;')">
                         <img src="Surveillance.jpg" alt="מעקבים"></a><br>מעקבים</div>
@@ -49,7 +67,7 @@
                     <div class="books"><a onclick="window.open('lishonnew.html', '_self;')">
                         <img src="LishonKufsa.jpg" alt="לישון בתוך קופסה"></a><br>לישון בתוך קופסה</div>
                 
-            <!-- </ul> -->
+            
         </div>
     
 
@@ -73,12 +91,10 @@
         </div>
         </div>
     </section>
-
-    <div class="footer-div">
-    <footer id="footer">
+   
+    <footer>
         <p>כל הזכויות שמורות למילי שמידט © 2020</p>
-    </footer>
-    </div>
+    </footer>    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>    
@@ -90,50 +106,6 @@
         AOS.init({
             
         });
-    </script>
-          <script>
-            // const openModalButtons=document.querySelectorAll('[data-modal-target]')
-            const closeModalButtons=document.querySelectorAll('[data-close]')
-            const overlay=document.getElementById('overlay')
-  
-            // openModalButtons.forEach(button=> {
-            //     button.addEventListener('click', ()=> {
-            //     const modal=document.querySelector(button.dataset.modalTarget)
-            //     openModal(modal)
-            //     })
-            // })
-  
-            overlay.addEventListener('click', ()=> {
-              const modals=document.querySelectorAll('.modal.active')
-              modals.forEach(modals=> {
-                  closeModal(modal)
-              })
-            })
-  
-            closeModalButtons.forEach(button=> {
-                button.addEventListener('click', ()=> {
-                const modal=button.closest('.modal')
-                closeModal(modal)
-                })
-            })
-  
-            function openModal(modal) {
-                if (modal==null) return
-                modal.classList.add('active')
-                overlay.classList.add('active')
-            }
-  
-            function closeModal(modal) {
-                if (modal==null) return
-                modal.classList.remove('active')
-                overlay.classList.remove('active')
-            }
-
-            window.onload=function() {
-                setTimeout(function () {
-                openModal(modal) ('show');
-                }, 200);
-            }
-        </script>
+    </script>          
 </body>
 </html>

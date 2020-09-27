@@ -19,51 +19,44 @@ body {
     overflow-x: hidden;
 }
 
-.sidebar {
+#progress {
+    height: 5px;
+    width: 0;
+    background-color: rgb(255, 155, 135);
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+}
+
+.navbar {
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 99999;   
+    z-index: 9999;
 }
 
-.nav-bar {
-    background-color: rgb(39, 39, 39);
+.navbar-nav {
+    float: right;
+    margin-right: -50px;
+    text-align: center;
 }
 
-.nav-bar #my-list {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding-left: 10px;
-    padding-right: 10px;
+.nav-item {
+    margin-left: 1em;
 }
 
-.nav-bar li {
-    display: inline-block;
-    margin: 20px 20px;
-    list-style: none;
-}
-
-li a {
-    color: white;
+#special {
+    margin-left: 20px;
+    color: rgb(255, 255, 235);
     text-decoration: none;
 }
 
-li a:hover {
+.color {
+    color: rgb(255, 255, 235);
+}
+
+.color:hover {
     color: rgb(255, 155, 135);
-    cursor: pointer;
-}
-
-@media screen and (max-width: 531px) {
-    li a {
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 444px) {
-    li a {
-        font-size: 10px;
-    }
 }
 
 .bookpage {
@@ -78,22 +71,25 @@ li a:hover {
 }
 
 .content {
+    text-align: right;
     padding: 0 30px;
     margin-top: 20px;
     height: 450px;
     display: flex;
 }
 
-h1 {
+.bookname h1 {
     text-align: center;
 }
 
 img {
+    margin: 0 auto;
     width: 270px;
     height: 400px;
 }
 
-p {
+.content p {
+    margin: 0 auto;
     margin-top: 15px;
     padding: 0 30px;
 }
@@ -109,7 +105,7 @@ p {
 }
 
 form {
-    margin-right: 600px;
+    margin: 0 auto;
     width: 50px;
 }
 
@@ -117,19 +113,11 @@ form {
     .content {
         height: 550px;
     }
-
-    form {
-        margin-right: 500px;
-    }
 }
 
 @media screen and (max-width: 1040px) {
-    p {
+    .content p {
         font-size: 14px;
-    }
-
-    form {
-        margin-right: 450px;
     }
 }
 
@@ -144,17 +132,13 @@ form {
         height: 520px;
     }
 
-    p {
+    .content p {
         font-size: 12px;
     }
 
     img {
         width: 202px;
         height: 300px;
-    }
-
-    form {
-        margin-right: 350px;
     }
 }
 
@@ -170,7 +154,7 @@ form {
         height: 70px;
     }
 
-    h1 {
+    .bookname h1 {
         margin-top: 0;
         margin-bottom: 0;
         font-size: 30px;
@@ -183,15 +167,9 @@ form {
     }
 
     img {
-        margin-right: 162px;
-    }
-
-    p {
-        margin-right: 55px;
-    }
-    
-    form {
-        margin-right: 247px;
+        width: 152px;
+        height: 225px;
+        margin-bottom: 20px;
     }
 }
 
@@ -201,10 +179,9 @@ form {
         height: 70px;
     }
 
-    h1 {
+    .bookname h1 {
         margin-top: 0;
         margin-bottom: 0;
-        font-size: 30px;
     }
 
     .content {
@@ -212,47 +189,17 @@ form {
         flex-direction: column;
         margin-top: 0;
     }
-
-    img {
-        margin-right: 152px;
-    }
-
-    p {
-        margin-right: 55px;
-    }
-    
-    form {
-        margin-right: 242px;
-    }
 }
 
 @media screen and (max-width: 515px) {
     .content {
         height: 770px;
     }
-
-    img {
-        width: 135px;
-        height: 200px;
-        margin-right: 160px;
-    }
-
-    form {
-        margin-right: 212px;
-    }
 }
 
 @media screen and (max-width: 451px) {
     .content {
         height: 820px;
-    }
-
-    img {
-        margin-right: 130px;
-    }
-
-    form {
-        margin-right: 190px;
     }
 }
 
@@ -261,22 +208,13 @@ form {
         height: 60px;
     }
 
-    h1 {
+    .bookname h1 {
         margin-top: 0;
         margin-bottom: 0;
-        font-size: 20px;
     }
 
     .content {
         height: 950px;
-    }
-
-    img {
-        margin-right: 105px;
-    }
-    
-    form {
-        margin-right: 153px;
     }
 }
 
@@ -285,31 +223,18 @@ form {
         justify-content: center;
         align-items: center;
     }
-    .content {
-        height: 1035px;
-    }
-
-    img {
-        margin-right: 95px;
-    }
-
-    form {
-        margin-right: 145px;
-    }
 }
 
-footer {
-    height: 50px;
-    margin-top: 20px;
-    padding: 20px;
-    text-align: center;
-    background-color: rgb(39, 39, 39);
-    color: white;
-    bottom: 0;
+@media screen and (max-width: 294px) {
+    .content {
+        height: 1200px;
+    }
 }
 
 footer p {
+    text-align: center;
     font-size: 14px;
+    font-weight: bold;
     margin-bottom: 0;
     margin-top: 0;
 }

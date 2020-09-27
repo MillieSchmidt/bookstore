@@ -34,50 +34,40 @@ body {
     z-index: 99999;
 }
 
-#fixed {
+.navbar {
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 9999;
 }
 
-.nav-bar {
-    background-color: rgb(39, 39, 39);
+.navbar-nav {
+    float: right;
+    margin-right: -50px;
+    text-align: center;
 }
 
-.nav-bar #my-list {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding-left: 10px;
-    padding-right: 10px;
+.nav-item {
+    margin-left: 1em;
 }
 
-.nav-bar li {
-    display: inline-block;
-    margin: 20px 20px;
-    list-style: none;
-}
-
-.nav-bar li a {
+#special {
+    margin-left: 20px;
     color: rgb(255, 255, 235);
     text-decoration: none;
 }
 
-li a:hover {
+.color {
+    color: rgb(255, 255, 235);
+}
+
+.color:hover {
     color: rgb(255, 155, 135);
-    cursor: pointer;
 }
 
-@media screen and (max-width: 531px) {
-    li a {
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 444px) {
-    li a {
-        font-size: 10px;
+@media screen and (max-width: 518px) {
+    .navbar-nav {
+        margin-right: 0;
     }
 }
 
@@ -124,12 +114,7 @@ header {
 
 @media screen and (max-width: 703px) {
     .hero h1 {
-        font-size: 28px;
         margin: 0, auto;
-    }
-
-    ul {
-        margin-top: 20px;
     }
 }
 
@@ -153,12 +138,6 @@ header {
         margin: 0, auto;
         padding-right: 0;
     }
-
-    /* #description {
-        margin-top: 30px;
-        font-weight: normal;
-        font-size: 16px;
-    } */
 }
 
 @media screen and (max-width: 453px) {
@@ -183,13 +162,6 @@ header {
 
     .hero h1 {
         height: 30px;
-        font-size: 20px;
-    }
-
-    #description {
-        font-size: 14px;
-        text-align: center;
-        margin-bottom: 0;
     }
 }
 
@@ -210,22 +182,26 @@ header {
     box-shadow: 5px 5px 5px rgb(39, 39, 39, 0.7);
 }
 
-.my-books img:hover {   
+.books img:hover {   
     transform: scale(1.3);
     cursor: pointer;
 }
 
 @media screen and (max-width: 900px) {
-    .my-books img {
+    .books img {
         width: 140px;
         height: 200px;
     }
 }
 
 @media screen and (max-width: 647px) {
-    .my-books img {
+    .books img {
         width: 105px;
         height: 150px;
+    }
+
+    .books {
+        font-size: 14px;
     }
 }
 
@@ -240,7 +216,7 @@ header {
 }   
 
 @media screen and (max-width: 370px) {
-   .my-books img {
+   .books img {
        width: 110px;
        height: 157px;
    }
@@ -292,9 +268,8 @@ p a:hover {
 }
 
 #goup {
-    background-color: rgb(173, 216, 230);
+    background-color: #333;
     margin: auto;
-    /* margin-right: 700px; */
     width: 100px;
     height: 40px;
     border: 1px solid;
@@ -302,14 +277,14 @@ p a:hover {
 }
 
 #goup a {
-    color: #333;
+    color: rgb(255, 255, 235);
     text-decoration: none;
     font-weight: bold;
     font-size: 15px;
 }
 
 #goup a:hover {
-    color: blue;
+    color: rgb(255, 155, 135);
     cursor: pointer;
 }
 
@@ -322,32 +297,12 @@ p a:hover {
     .pagetitle h1 {
         font-size: 30px;
     }
-
-    button {
-        margin-right: 600px;
-    }
-}
-
-@media screen and (max-width: 955px) {
-    button {
-        margin-right: 500px;
-    }
-}
-
-@media screen and (max-width: 846px) {
-    button {
-        margin-right: 400px;
-    }
 }
 
 @media screen and (max-width: 712px) {
     .profileimage {
         width: 120px;
         height: 120px;
-    }
-
-    button {
-        margin-right: 0;
     }
 }
 
@@ -358,10 +313,6 @@ p a:hover {
 
     .aboutpage #paragraph {
         font-size: 14px;
-    }
-
-    button {
-        height: 20px;
     }
 }
 
@@ -393,41 +344,9 @@ p a:hover {
     }
 }
 
-/* .footer-div {
-    position: absolute;
-    width: 100%;
-}
-
-#footer {
-    width: 100%;
-    height: 50px;
-    margin-top: 20px;
-    padding: 20px;
-    text-align: center;
-    background-color: rgb(39, 39, 39);
-    color: white;
-    bottom: 0;
-} */
-
-/* footer ul {
-    margin-bottom: 1px;
-    margin-top: 1px;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-}
-
-footer li a,
-footer li a:active
-footer li a:visited {
-    color: white;
-    font-size: 14px;
-} */
-
 footer p {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 0;
     margin-top: 0;
 }
-

@@ -14,55 +14,48 @@ body {
     overflow-x: hidden;
 }
 
-.sidebar {
+#progress {
+    height: 5px;
+    width: 0;
+    background-color: rgb(255, 155, 135);
     position: fixed;
-    width: 100%;
     top: 0;
-    z-index: 99999;   
+    z-index: 99999;
 }
 
-.nav-bar {
-    background-color: rgb(39, 39, 39);
+.navbar {
+    width: 100%;
+    position: fixed!important;
+    top: 0;
+    z-index: 9999;
 }
 
-.nav-bar #my-list {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding-left: 10px;
-    padding-right: 10px;
+.navbar-nav {
+    float: right;
+    margin-right: -50px;
+    text-align: center;
 }
 
-.nav-bar li {
-    display: inline-block;
-    margin: 20px 20px;
-    list-style: none;
+.nav-item {
+    margin-left: 1em;
 }
 
-li a {
-    color: white;
+#special {
+    margin-left: 20px;
+    color: rgb(255, 255, 235);
     text-decoration: none;
 }
 
-li a:hover {
+.color {
+    color: rgb(255, 255, 235);
+}
+
+.color:hover {
     color: rgb(255, 155, 135);
-    cursor: pointer;
-}
-
-@media screen and (max-width: 531px) {
-    li a {
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 444px) {
-    li a {
-        font-size: 10px;
-    }
 }
 
 .bookpage {
-  margin-top: 0;
+  margin: 100px auto;
 }
 
 .bookname {
@@ -73,6 +66,7 @@ li a:hover {
 }
 
 .button {
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -156,23 +150,25 @@ li a:hover {
 }
 
 .content {
+    text-align: right;
     padding: 0 30px;
     margin-top: 20px;
     height: 450px;
     display: flex;
 }
 
-h1 {
+.bookname h1 {
     text-align: center;
 }
 
 .content #cover {
+    margin: 0 auto;
     width: 270px;
     height: 400px;
 }
 
 .content p {
-    margin-top: -10px;
+    margin: 0 auto;
     padding: 0 30px;
 }
 
@@ -202,7 +198,7 @@ form {
 }
 
 @media screen and (max-width: 1040px) {
-    p {
+    .content p {
         font-size: 14px;
     }
 
@@ -248,7 +244,7 @@ form {
         height: 70px;
     }
 
-    h1 {
+    .bookname h1 {
         margin-top: 0;
         margin-bottom: 0;
         font-size: 30px;
@@ -261,12 +257,9 @@ form {
     }
 
     .content #cover {
-        margin-right: 162px;
-    }
-
-    .content p {
-        margin-top: 20px;
-        margin-right: 55px;
+        width: 152px;
+        height: 225px;
+        margin-bottom: 20px;
     }
     
     form {
@@ -280,24 +273,10 @@ form {
         height: 70px;
     }
 
-    h1 {
-        margin-top: 0;
-        margin-bottom: 0;
-        font-size: 30px;
-    }
-
     .content {
         height: 820px;
         flex-direction: column;
         margin-top: 0;
-    }
-
-    .content #cover {
-        margin-right: 152px;
-    }
-
-    p {
-        margin-right: 55px;
     }
     
     form {
@@ -313,7 +292,6 @@ form {
     .content #cover {
         width: 135px;
         height: 200px;
-        margin-right: 160px;
     }
 
     form {
@@ -326,10 +304,6 @@ form {
         height: 820px;
     }
 
-    .content #cover {
-        margin-right: 130px;
-    }
-
     form {
         margin-right: 190px;
     }
@@ -340,18 +314,13 @@ form {
         height: 60px;
     }
 
-    h1 {
+    .bookname h1 {
         margin-top: 0;
         margin-bottom: 0;
-        font-size: 20px;
     }
 
     .content {
         height: 950px;
-    }
-
-    .content #cover {
-        margin-right: 105px;
     }
     
     form {
@@ -365,11 +334,7 @@ form {
         align-items: center;
     }
     .content {
-        height: 1035px;
-    }
-
-    .content #cover {
-        margin-right: 95px;
+        height: 1800px;
     }
 
     form {
@@ -377,18 +342,16 @@ form {
     }
 }
 
-footer {
-    height: 50px;
-    margin-top: 20px;
-    padding: 20px;
-    text-align: center;
-    background-color: rgb(39, 39, 39);
-    color: white;
-    bottom: 0;
+@media screen and (max-width: 246px) {
+    .content {
+        height: 1900px;
+    }
 }
 
 footer p {
+    text-align: center;
     font-size: 14px;
+    font-weight: bold;
     margin-bottom: 0;
     margin-top: 0;
 }
