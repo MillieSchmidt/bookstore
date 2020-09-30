@@ -41,9 +41,9 @@
         </header>
         <section>
             <div id="gallery">
-                <img class="image" src="Reviews/Guy.png" alt="המלצה" onclick="bigPic(this)">
-                <img class="image" src="Reviews/Geula.png" alt="המלצה" onclick="bigPic(this)">
-                <img class="image" src="Reviews/Zmani.png" alt="המלצה" onclick="bigPic(this)">
+                <img class="image" src="Reviews/Guy.png" alt="המלצה" onmouseover="bigPic(this)" onmouseout="cancel(this)">
+                <img class="image" src="Reviews/Geula.png" alt="המלצה" onmouseover="bigPic(this)" onmouseout="cancel(this)">
+                <img class="image" src="Reviews/Zmani.png" alt="המלצה" onmouseover="bigPic(this)" onmouseout="cancel(this)">
                 <!-- <img data-aos="flip-left" data-aos-duration="100000" class="specialimage" src="Reviews/SweetNightBig.png" alt="המלצה"> -->
             </div>
         </section>
@@ -64,6 +64,10 @@
                 for (var i=0; i<pics.length; i++) {
                     pics[i].className="image"                    
                 } picture.className="bigimage"                
+            }
+
+            function cancel(thatPic) {
+              thatPic.className="image"
             }
         </script>
     </body>
