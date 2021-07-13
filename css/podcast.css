@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(255, 255, 235);
+    /* background-image: -webkit-linear-gradient(top, rgb(146, 255, 255, 0.55), rgb(116, 206, 236));
+    background-image: -moz-linear-gradient(top, rgba(146, 255, 255, 0.55), rgb(116, 206, 236));
+    background-image: -ms-linear-gradient(top,  rgba(146, 255, 255, 0.55), rgb(116, 206, 236));
+    background-image: -o-linear-gradient(top,  rgba(146, 255, 255, 0.55), rgb(116, 206, 236));
+    background-image: linear-gradient(top, rgba(146, 255, 255, 0.55), rgb(116, 206, 236)); */
+    font-size: 18px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+#progress {
+    height: 5px;
+    width: 0;
+    background-color: rgb(255, 155, 135);
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.navbar-nav {
+    float: right;
+    margin-right: -50px;
+    text-align: center;
+}
+
+.nav-item {
+    margin-left: 1em;
+}
+
+#special {
+    margin-left: 20px;
+    color: rgb(255, 255, 235);
+    text-decoration: none;
+}
+
+.color {
+    color: rgb(255, 255, 235);
+}
+
+.color:hover {
+    color: rgb(255, 155, 135);
+}
+
+header #title {
+    display: inline-block;
+}
+
+header h1 {
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 531px) {
+    header h1 {
+        font-size: 25px;
+    }
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.podcast {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 531px) {
+    .podcast span {
+        font-size: 16px;
+    }
+}
+
+.episode {
+    margin: 50px auto;
+}
+
+#up-arrow {
+    opacity: 0;
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.1rem;
+    padding-left: 0.07rem;
+    background-color: rgb(49, 49, 49, 0.8);
+    border-radius: 50%;
+}
+
+#up-arrow a {
+    font-size: 1.7rem;
+    color: whitesmoke;
+}
+
+#up-arrow a:hover {
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+}

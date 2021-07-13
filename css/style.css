@@ -1,0 +1,376 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(255, 255, 235);
+    /* background-image: -webkit-linear-gradient(top, rgb(146, 255, 255, 0.55), rgb(116, 206, 236));
+    background-image: -moz-linear-gradient(top, rgba(146, 255, 255, 0.55), rgb(116, 206, 236));
+    background-image: -ms-linear-gradient(top,  rgba(146, 255, 255, 0.55), rgb(116, 206, 236));
+    background-image: -o-linear-gradient(top,  rgba(146, 255, 255, 0.55), rgb(116, 206, 236));
+    background-image: linear-gradient(top, rgba(146, 255, 255, 0.55), rgb(116, 206, 236)); */
+    font-size: 18px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+#progress {
+    height: 5px;
+    width: 0;
+    background-color: rgb(255, 155, 135);
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.navbar-nav {
+    float: right;
+    margin-right: -50px;
+    text-align: center;
+}
+
+.nav-item {
+    margin-left: 1em;
+}
+
+#special {
+    margin-left: 20px;
+    color: rgb(255, 255, 235);
+    text-decoration: none;
+}
+
+.color {
+    color: rgb(255, 255, 235);
+}
+
+.color:hover {
+    color: rgb(255, 155, 135);
+}
+
+@media screen and (max-width: 518px) {
+    .navbar-nav {
+        margin-right: 0;
+    }
+}
+
+.content {
+    display: inline-block;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+@media screen and (max-width: 930px) {
+    .content {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .content {
+        width: 100%;
+        padding: 0, 20px;
+    }
+}
+
+header {
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
+
+.hero h1 {
+    margin-top: 100px;
+    font-size: 45px;
+    color: black;
+}
+
+@media screen and (max-width: 862px) {
+    header {
+        height: 100px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 703px) {
+    .hero h1 {
+        margin: 0, auto;
+    }
+}
+
+@media screen and (max-width: 518px) {
+    header {
+        margin-top: 10px;
+        height: 100px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        margin: 0, auto;
+    }
+
+    .nav-bar {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    ul {
+        margin: 0, auto;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 453px) {
+    header {
+        margin-top: 30px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    header {
+        margin-top: 0;
+        height: 40px;
+    }
+
+    ul {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-right: 0;
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        height: 30px;
+    }
+}
+
+.all-books {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.books {
+    display: inline-block;
+}
+
+.books img {
+    margin: 10px;
+    width: 210px;
+    height: 300px;
+    transition: 1s;
+    box-shadow: 5px 5px 5px rgb(39, 39, 39, 0.7);
+}
+
+.books img:hover {   
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .books img {
+        width: 140px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 647px) {
+    .books img {
+        width: 105px;
+        height: 150px;
+    }
+
+    .books {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .my-books {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}   
+
+@media screen and (max-width: 370px) {
+   .books img {
+       width: 110px;
+       height: 157px;
+   }
+}
+
+.aboutpage {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 30px;
+    background-color: white;
+}
+
+.topofpage {
+    margin-bottom: 135px;
+}
+
+.pagetitle {
+    float: right;
+}
+
+.pagetitle h1 {
+    font-size: 35px;
+}
+
+.profileimage {
+    float: left;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+#paragraph {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+p a {
+    color: blue;
+    text-decoration: none;
+}
+
+p a:hover {
+    color: purple;
+    cursor: pointer;
+}
+
+#goup {
+    background-color: #333;
+    margin: auto;
+    width: 100px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 10%;
+}
+
+#goup a {
+    color: rgb(255, 255, 235);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#goup a:hover {
+    color: rgb(255, 155, 135);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1089px) {
+    .profileimage {
+        width: 150px;
+        height: 150px;
+    }
+
+    .pagetitle h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 712px) {
+    .profileimage {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .pagetitle h1 {
+        font-size: 20px;
+    }
+
+    .aboutpage #paragraph {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .aboutpage {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .topofpage {
+        margin-bottom: 100px;
+    }
+
+    .pagetitle h1 {
+        text-align: center;
+    }
+
+    .profileimage {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .aboutpage #paragraph {
+        font-size: 12px;
+    }
+}
+
+#up-arrow {
+    opacity: 0;
+    position: fixed;
+    bottom: 5rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.1rem;
+    padding-left: 0.07rem;
+    background-color: rgb(49, 49, 49, 0.8);
+    border-radius: 50%;
+}
+
+#up-arrow a {
+    font-size: 1.7rem;
+    color: whitesmoke;
+}
+
+#up-arrow a:hover {
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+}

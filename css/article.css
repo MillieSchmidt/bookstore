@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(255, 255, 235);
+    /* background-image: -webkit-linear-gradient(top, rgb(146, 255, 255, 0.55), rgb(116, 206, 236));
+    background-image: -moz-linear-gradient(top, rgba(146, 255, 255, 0.55), rgb(116, 206, 236));
+    background-image: -ms-linear-gradient(top,  rgba(146, 255, 255, 0.55), rgb(116, 206, 236));
+    background-image: -o-linear-gradient(top,  rgba(146, 255, 255, 0.55), rgb(116, 206, 236));
+    background-image: linear-gradient(top, rgba(146, 255, 255, 0.55), rgb(116, 206, 236)); */
+    font-size: 18px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    overflow-x: hidden;
+}
+
+#progress {
+    height: 5px;
+    width: 0;
+    background-color: rgb(255, 155, 135);
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.navbar-nav {
+    float: right;
+    margin-right: -50px;
+    text-align: center;
+}
+
+.nav-item {
+    margin-left: 1em;
+}
+
+#special {
+    margin-left: 20px;
+    color: rgb(255, 255, 235);
+    text-decoration: none;
+}
+
+.color {
+    color: rgb(255, 255, 235);
+}
+
+.color:hover {
+    color: rgb(255, 155, 135);
+}
+
+#allpage {
+    margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    padding: 5%;
+    background: url(noise.png);
+    background-color: white;
+    text-align: right;
+}
+
+@media screen and (max-width: 305px) {
+    #allpage {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 205px) {
+    #allpage h1 {
+        font-size: 150%;
+    }
+
+    #allpage h3 {
+        font-size: 130%;
+    }
+}
+
+@media screen and (max-width: 164px) {
+    #allpage {
+        margin-top: 80px;
+    }
+}
+
+#itay:hover {
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ביקורות</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/reviewsstyle.css">        
+    </head>
+    <body>
+        <div id="progress"></div>
+        <header>
+            
+            <nav class="navbar navbar-expand-xs navbar-expand-sm navbar-light" style="background-color: rgb(39, 39, 39);">
+                <a class="nav-item" id="special">ניווט</a>
+                <button class="navbar-toggler" type="button" style="background-color: rgb(255, 255, 235)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon" style="background-color: rgb(255, 255, 235)"></span>
+                </button>
+                      
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html"><span class="color">מי אני?</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html"><span class="color">חנות</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="article.html"><span class="color">מאמר</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="podcast.html"><span class="color">פודקאסט</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><span class="color">ביקורות</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><span class="color">צור קשר</span></a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>  
+            
+            <h1>מה חושבים הקוראים</h1>
+        </header>
+        <section>
+            <div id="gallery">
+                <img class="image" src="reviews/Guy.png" alt="המלצה" onmouseover="bigPic(this)" onmouseout="cancel(this)">
+                <img class="image" src="reviews/Geula.png" alt="המלצה" onmouseover="bigPic(this)" onmouseout="cancel(this)">
+                <img class="image" src="reviews/Zmani.png" alt="המלצה" onmouseover="bigPic(this)" onmouseout="cancel(this)">
+                <!-- <img data-aos="flip-left" data-aos-duration="100000" class="specialimage" src="Reviews/SweetNightBig.png" alt="המלצה"> -->
+            </div>
+        </section>
+
+        <footer>
+            <p>כל הזכויות שמורות למילי שמידט © 2020</p>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>    
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+        <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+
+        <script>                      
+            function bigPic(picture) {
+                var pics=document.getElementById('gallery').children
+                
+                for (var i=0; i<pics.length; i++) {
+                    pics[i].className="image"                    
+                } picture.className="bigimage"                
+            }
+
+            function cancel(thatPic) {
+              thatPic.className="image"
+            }
+        </script>
+    </body>
+</html>
+
