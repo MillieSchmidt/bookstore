@@ -170,6 +170,20 @@ header {
     margin: 0 auto;
 }
 
+.bl {
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.bl p {
+    font-size: 40px;
+}
+
+.bl .books img {
+    width: 140px;
+    height: 200px;
+}
+
 .books {
     display: inline-block;
 }
@@ -182,15 +196,15 @@ header {
     box-shadow: 5px 5px 5px rgb(39, 39, 39, 0.7);
 }
 
-.books img:hover {   
-    transform: scale(1.3);
-    cursor: pointer;
-}
-
 @media screen and (max-width: 900px) {
     .books img {
         width: 140px;
         height: 200px;
+    }
+
+    .bl .books img {
+        width: 94px;
+        height: 134px;
     }
 }
 
@@ -198,6 +212,11 @@ header {
     .books img {
         width: 105px;
         height: 150px;
+    }
+
+    .bl .books img {
+        width: 60px;
+        height: 100px;
     }
 
     .books {
