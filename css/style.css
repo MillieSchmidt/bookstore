@@ -188,6 +188,10 @@ header {
     display: inline-block;
 }
 
+.books a {
+    cursor: pointer;
+}
+
 .books img {
     margin: 10px;
     width: 210px;
